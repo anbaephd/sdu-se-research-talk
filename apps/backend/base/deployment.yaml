@@ -13,8 +13,7 @@ spec:
     spec:
       containers:
       - name: demoapp
-        image: python:12-slim
-        # image: anderslaunerbaek/sdu-se-demo-app:latest
+        image: anderslaunerbaek/sdu-se-demo-app:latest
         imagePullPolicy: Always
         ports:
         - name: http
