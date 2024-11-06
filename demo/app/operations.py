@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class DemoOperation(BaseModel):
     input_1: int
     input_2: int
+    mode: str = ""
 
     @property
     def compute(self) -> int:
@@ -11,24 +12,20 @@ class DemoOperation(BaseModel):
 
     @property
     def output(self) -> int:
-        return {"output": self.compute}
+        return {"mode": self.mode, "output": self.compute}
 
 
 class DemoOperationMul(DemoOperation):
+    mode: str = "mul"
+
     @property
     def compute(self) -> int:
         return self.input_1 * self.input_2
 
-    @property
-    def output(self) -> int:
-        return {"output": self.compute}
-
 
 class DemoOperationAdd(DemoOperation):
+    mode: str = "add"
+
     @property
     def compute(self) -> int:
         return self.input_1 + self.input_2
-
-    @property
-    def output(self) -> int:
-        return {"output": self.compute}
