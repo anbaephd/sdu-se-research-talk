@@ -14,7 +14,7 @@ spec:
       containers:
       - name: demoapp
         image: anderslaunerbaek/sdu-se-demo-app:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - name: http
           containerPort: 8080
