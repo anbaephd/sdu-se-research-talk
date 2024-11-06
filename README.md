@@ -48,6 +48,16 @@ SDU SE Research Talk Dec 2024
         --path=./clusters/dev \
         --personal
         ```
+        
+        or 
+        
+        ```bash
+        flux bootstrap github \
+        --owner=anbaephd \
+        --repository=sdu-se-research-talk \
+        --branch=main \
+        --path=./clusters/dev
+        ```
 
     3. Use PAT, eg.
 
