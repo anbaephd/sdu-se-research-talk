@@ -9,3 +9,8 @@ resources:
 #       - operation=""
 #       # - operation="add"
 #       # - operation="mul"
+configMapGenerator:
+  - name: env-config
+    behavior: merge
+    literals:
+      - operation=""

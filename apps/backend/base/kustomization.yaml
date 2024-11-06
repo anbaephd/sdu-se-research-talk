@@ -7,7 +7,5 @@ configMapGenerator:
   - name: env-config
     literals: 
       - operation=""
-      # - operation="add"
-      # - operation="mul"
 commonLabels:
   app: backend
