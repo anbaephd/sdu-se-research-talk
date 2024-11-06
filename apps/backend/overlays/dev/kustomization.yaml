@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: default
 resources:
   - ../../base
-configMapGenerator:
-  - name: env-config
-    literals:
-      - operation=""
-      # - operation="add"
-      # - operation="mul"
+# configMapGenerator:
+#   - name: env-config
+#     literals:
+#       - operation=""
+#       # - operation="add"
+#       # - operation="mul"
