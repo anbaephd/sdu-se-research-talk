@@ -13,4 +13,4 @@ configMapGenerator:
   - name: env-config
     behavior: merge
     literals:
-      - operation=""
+      - operation="add"
