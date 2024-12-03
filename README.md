@@ -1,5 +1,11 @@
 # sdu-se-research-talk
+
 SDU SE Research Talk Dec 2024
+
+## Status
+
+- [![Build and push - Demo App to Docker Hub](https://github.com/anbaephd/sdu-se-research-talk/actions/workflows/build-push.yml/badge.svg)](https://github.com/anbaephd/sdu-se-research-talk/actions/workflows/build-push.yml)
+- [![Dependabot Updates](https://github.com/anbaephd/sdu-se-research-talk/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/anbaephd/sdu-se-research-talk/actions/workflows/dependabot/dependabot-updates)
 
 ## Prerequisites
 
