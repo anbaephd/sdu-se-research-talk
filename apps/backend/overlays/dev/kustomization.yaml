@@ -7,6 +7,6 @@ configMapGenerator:
   - name: env-config
     behavior: merge
     literals:
-      - operation=""
-      # - operation="add"
+      # - operation=""
+      - operation="add"
       # - operation="mul"
