@@ -8,5 +8,5 @@ configMapGenerator:
     behavior: merge
     literals:
       # - operation=""
-      - operation="add"
-      # - operation="mul"
+      # - operation="add"
+      - operation="mul"
