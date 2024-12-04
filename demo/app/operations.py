@@ -1,7 +1,7 @@
-from pydantic import Baseoperationl
+from pydantic import BaseModel
 
 
-class DemoOperation(Baseoperationl):
+class DemoOperation(BaseModel):
     input_1: int
     input_2: int
     operation: str = ""
