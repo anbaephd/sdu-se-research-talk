@@ -27,7 +27,7 @@ async def get_health() -> HealthCheck:
 # Create a product
 @app.post(
     "/",
-    summary="Perform a Health Check",
+    summary="Perform a ENV defined operation",
     status_code=status.HTTP_200_OK,
 )
 async def create_product(do: SelectedDemoOperation):
