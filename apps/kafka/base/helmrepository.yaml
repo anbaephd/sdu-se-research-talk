@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: kafka
+  namespace: default
+spec:
+  interval: 10m0s
+  url: oci://registry-1.docker.io/bitnamicharts/kafka
+  ref:
+    tag: 31.2.0
+
+  
