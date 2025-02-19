@@ -3,11 +3,18 @@ kind: Service
 metadata:
   name: backend
 spec:
-  type: ClusterIP
   selector:
     app: backend
+  type: LoadBalancer
+  # loadBalancerIP is optional. MetalLB will automatically allocate an IP 
+  # from its pool if not specified. You can also specify one manually.
+  loadBalancerIP: 192.168.3.10
   ports:
     - name: http
-      port: 8080
       protocol: TCP
-      targetPort: http
+      port: 8080
+      targetPort: 8080
+    # - name: https
+    #   protocol: TCP
+    #   port: 443
+    #   targetPort: 443
