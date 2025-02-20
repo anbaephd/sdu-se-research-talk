@@ -16,5 +16,9 @@ spec:
         name: bitnamicharts
       interval: 10m0s
   releaseName: redis
-  valuesFiles:
-    - values.yaml
+  # # valuesFiles:
+  # #   - values.yaml
+  # valuesFrom:
+  #   - kind: ConfigMap
+  #     name: dev-values
+  #     valuesKey: values.yaml

@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   - ../../helmcharts/bitnamicharts.yaml
   - redis.yaml
-  - values.yaml
+  # - values.yaml
 commonLabels:
   app: redis
