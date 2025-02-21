@@ -4,5 +4,5 @@ resources:
   - ../../helmcharts/bitnamicharts.yaml
   - kafka.yaml
   - values.yaml
-labels:
+commonLabels:
   app: kafka

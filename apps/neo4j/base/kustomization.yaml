@@ -4,5 +4,5 @@ resources:
   - ../../helmcharts/bitnamicharts.yaml
   - neo4j.yaml
   - values.yaml
-labels:
+commonLabels:
   app: neo4j
