@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: registry
+  name: schema-registry
 spec:
   selector:
     matchLabels:
-      app: registry
+      app: schema-registry
   template:
     metadata:
       labels:
-        app: registry
+        app: schema-registry
     spec:
       containers:
       - name: schema-registry

@@ -41,13 +41,13 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: registry
+  name: schema-registry
   namespace: flux-system
 spec:
   interval: 10m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/kafka-registry/overlays/dev
+  path: ./apps/schema-registry/overlays/dev
   prune: true
 ---
