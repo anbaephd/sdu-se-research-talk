@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
   - ../../helmcharts/bitnamicharts.yaml
   - neo4j.yaml
-  - values.yaml
 commonLabels:
   app: neo4j
