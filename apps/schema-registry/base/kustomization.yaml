@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - ../../helmcharts/bitnamicharts.yaml
   - schema-registry.yaml
-commonLabels:
-  app: schema-registry
+labels:
+  - pairs:
+      app: schema-registry

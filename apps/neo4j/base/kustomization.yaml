@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - ../../helmcharts/bitnamicharts.yaml
   - neo4j.yaml
-commonLabels:
-  app: neo4j
+labels:
+  - pairs:
+      app: neo4j

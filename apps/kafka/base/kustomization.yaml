@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - ../../helmcharts/bitnamicharts.yaml
   - kafka.yaml
-commonLabels:
-  app: kafka
+labels:
+  - pairs:
+      app: kafka
