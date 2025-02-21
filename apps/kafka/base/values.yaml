@@ -2,10 +2,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: redis-values
+  name: kafka-values
   namespace: default
 data:
     values.yaml: |
-      architecture: standalone
+      controller:
+        replicaCount: 1
       persistence:
-        size: 4Gi
+        size: 10Gi

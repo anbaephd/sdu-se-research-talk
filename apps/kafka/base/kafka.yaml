@@ -16,3 +16,7 @@ spec:
         name: bitnamicharts
       interval: 10m0s
   releaseName: kafka
+  valuesFrom:
+  - kind: ConfigMap
+    name: kafka-values
+    valuesKey: values.yaml
