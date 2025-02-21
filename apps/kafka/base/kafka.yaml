@@ -10,6 +10,11 @@ data:
         replicaCount: 1
       persistence:
         size: 10Gi
+      listeners:
+        client:
+          protocol: PLAINTEXT
+          name: CLIENT
+
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
