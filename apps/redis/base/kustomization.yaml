@@ -4,5 +4,5 @@ resources:
   - ../../helmcharts/bitnamicharts.yaml
   - redis.yaml
   - values.yaml
-commonLabels:
+labels:
   app: redis
