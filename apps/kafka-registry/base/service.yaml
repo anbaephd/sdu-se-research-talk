@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend
+  name: registry
 spec:
   selector:
-    app: backend
+    app: registry
   type: ClusterIP
   # loadBalancerIP is optional. MetalLB will automatically allocate an IP 
   # from its pool if not specified. You can also specify one manually.
