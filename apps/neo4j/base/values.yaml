@@ -10,3 +10,5 @@ data:
         password: "password"
       persistence:
         size: 4Gi
+      service:
+        type: ClusterIP
