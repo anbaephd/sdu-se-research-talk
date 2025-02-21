@@ -7,14 +7,12 @@ metadata:
 data:
     values.yaml: |
       controller:
-        replicaCount: 1
+        replicaCount: 3
       persistence:
         size: 10Gi
       listeners:
         client:
           protocol: PLAINTEXT
-          name: CLIENT
-
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
