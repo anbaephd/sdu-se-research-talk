@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: neo4j
-      version: '20.7.1'
+      version: '0.3.0'
       sourceRef:
         kind: HelmRepository
         name: bitnamicharts
