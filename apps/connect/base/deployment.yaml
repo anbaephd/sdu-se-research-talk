@@ -61,9 +61,9 @@ spec:
           imagePullPolicy: IfNotPresent
           securityContext:
             allowPrivilegeEscalation: false
-          volumeMounts:
-            - mountPath: "/data/"
-              name: connect-pv-storage
+          # volumeMounts:
+          #   - mountPath: "/data/"
+          #     name: connect-pv-storage
           envFrom:
             - configMapRef:
                 name: connect-values
