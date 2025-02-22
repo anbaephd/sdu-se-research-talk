@@ -22,6 +22,17 @@ data:
   CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: "1"
   CONNECT_PLUGIN_PATH: /usr/share/java,/usr/share/confluent-hub-components,/data/connect-jars
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: connect-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -36,19 +47,28 @@ spec:
       labels:
         app: connect
     spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+      volumes:
+        - name: connect-pv-storage
+          persistentVolumeClaim:
+            claimName: connect-pvc
       containers:
-      - name: connect
-        image: confluentinc/cp-server-connect-base:7.8.0
-        imagePullPolicy: IfNotPresent
-        ports:
-        - name: http
-          containerPort: 8083
-          protocol: TCP
-        env:
-        - name: CONNECT_REST_ADVERTISED_HOST_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
-        envFrom:
-          - configMapRef:
-              name: connect-values
+        - name: connect
+          image: confluentinc/cp-server-connect-base:7.8.0
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            allowPrivilegeEscalation: false
+          volumeMounts:
+            - mountPath: "/data/"
+              name: connect-pv-storage
+          envFrom:
+            - configMapRef:
+                name: connect-values
+          env:
+            - name: CONNECT_REST_ADVERTISED_HOST_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
