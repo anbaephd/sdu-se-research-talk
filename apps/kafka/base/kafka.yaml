@@ -6,6 +6,13 @@ metadata:
   namespace: default
 data:
     values.yaml: |
+      numPartitions: 10
+      provisioning:
+        enabled: True
+        numPartitions: 10
+        replicationFactor: 1
+        topics:
+          - name: TEST
       controller:
         replicaCount: 3
       persistence:
