@@ -25,18 +25,18 @@ spec:
   path: ./apps/kafka/overlays/dev
   prune: true
 ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: redis
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
-#   path: ./apps/redis/overlays/dev
-#   prune: true
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: redis
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/redis/overlays/dev
+  prune: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -51,19 +51,19 @@ spec:
   path: ./apps/schema-registry/overlays/dev
   prune: true
 ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: neo4j
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
-#   path: ./apps/neo4j/overlays/dev
-#   prune: true
-# ---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: neo4j
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/neo4j/overlays/dev
+  prune: true
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
