@@ -21,17 +21,17 @@ data:
   CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: "1"
   CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: "1"
   CONNECT_PLUGIN_PATH: /usr/share/java,/usr/share/confluent-hub-components,/data/connect-jars
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: connect-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: connect-pvc
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 1Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -47,14 +47,14 @@ spec:
       labels:
         app: connect
     spec:
-      securityContext:
-        runAsUser: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-      volumes:
-        - name: connect-pv-storage
-          persistentVolumeClaim:
-            claimName: connect-pvc
+      # securityContext:
+      #   runAsUser: 1000
+      #   runAsGroup: 1000
+      #   runAsNonRoot: true
+      # volumes:
+      #   - name: connect-pv-storage
+      #     persistentVolumeClaim:
+      #       claimName: connect-pvc
       containers:
         - name: connect
           image: confluentinc/cp-server-connect-base:7.8.0
