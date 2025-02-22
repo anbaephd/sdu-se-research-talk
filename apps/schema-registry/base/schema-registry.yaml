@@ -6,7 +6,7 @@ metadata:
   namespace: default
 data:
     values.yaml: |
-      replicaCount: 3
+      replicaCount: 1
       kafka:
         enabled: false
       externalKafka:
