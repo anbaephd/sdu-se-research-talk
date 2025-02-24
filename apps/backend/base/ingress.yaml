@@ -4,18 +4,7 @@ metadata:
   name: http-ingress-backend
 spec:
   rules:
-  - host: service1.k8s-01.local.baekpetersen.dk
-    http:
-      paths:
-      - path: /
-        pathType: Prefix      
-        backend:
-          service:
-            name: backend
-            port:
-              number: 8080
-  - host: service2.k8s-01.local.baekpetersen.dk
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
