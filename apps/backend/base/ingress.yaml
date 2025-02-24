@@ -6,13 +6,13 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: backend
-            port:
-              number: 8080
+      # - path: /
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: backend
+      #       port:
+      #         number: 8080
       - path: /test
         pathType: Prefix
         backend:
